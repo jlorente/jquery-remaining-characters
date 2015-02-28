@@ -29,14 +29,14 @@ Include the source file in your page.
 ...
     <body>
     ...
-    <script src="_PATH_/remaining_characters.js" />
+    <script type="text/javascript" src="_PATH_/remaining_characters.js" ></script>
     </body>
 </html>
 ```
 
 Add the maxlength attribute to the text input or textarea:
 ```html
-<input type="text id="my-input" maxlength="400"/>
+<input type="text" id="my-input" maxlength="400"/>
 ```
 
 And just call:
