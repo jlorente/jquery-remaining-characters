@@ -1,0 +1,29 @@
+{
+  "name": "jquery-remaining-characters",
+  "version": "1.0.0",
+  "authors": [
+    "Jose Lorente Martin"
+  ],
+  "description": "Jquery plugin that adds a remaining character counter to text inputs and textareas",
+  "main": "remaining_characters.min.js",
+  "keywords": [
+    "[remaining",
+    "characters",
+    "counter",
+    "input",
+    "text",
+    "textarea]"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jlorente/jquery-remaining-characters",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7.0"
+  }
+}
