@@ -13,28 +13,41 @@
 (function ($, d, u) {
     var rFunction = function (options) {
         var defaults = {
-            label: 'p',
-            text: '{n}',
-            invalidClass: 'invalid'
+            label: {
+                tag: 'p',
+                id: null,
+                class: 'char-counter',
+                invalidClass: 'error'
+            },
+            text: '{n}'
         };
         var options = $.extend(defaults, options);
         return this.each(function () {
-            var $label = $(d.createElement(options.label));
+            var $label = $(d.createElement(options.label.tag));
             var $_this = $(this);
             var max = $_this.attr("maxlength");
-            var update = function(c) {
+            var update = function (c) {
                 var r = max - c;
                 $label.text(options.text.replace('{n}', r));
                 $label.toggleClass(options.invalidClass, r < 0);
             };
+            var identifier;
 
             if (max === u) {
                 throw "jQuery RemainingCharacters: Couldn't find maxlength attribute on attached element"
             }
-            if ($_this.next(".char-counter").length > 0) {
+            if (options.label.class !== null) {
+                $label.addClass(options.label.class);
+                identifier = '.' + options.label.class;
+            }
+            if (options.label.id !== null) {
+                $label.attr('id', options.label.id);
+                identifier = '#' + options.label.id;
+            }
+            if ($_this.next(identifier).length > 0) {
                 return;
             }
-            $label.text(max).addClass('char-counter');
+            $label.text(max);
             $_this.after($label);
             update($_this.val().length);
             $_this.on('keyup', function () {
