@@ -53,7 +53,7 @@ $("#my-input").remainingCharacters({
         tag: 'p',
         class: 'char-counter',
         id: 'char-counter-count',
-        errorClass: 'error-class'
+        invalidClass: 'error-class'
     },
     text: '{n}'
 });
