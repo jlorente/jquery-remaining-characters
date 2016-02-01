@@ -10,14 +10,7 @@
         "url": "git@github.com:jlorente/jquery-remaining-characters.git"
     },
     "main": "remaining_characters.min.js",
-    "keywords": [
-        "[remaining",
-        "characters",
-        "counter",
-        "input",
-        "text",
-        "textarea]"
-    ],
+    "keywords":  ["remaining","characters","counter","input","text","textarea"],
     "license": "MIT",
     "homepage": "https://github.com/jlorente/jquery-remaining-characters",
     "ignore": [
