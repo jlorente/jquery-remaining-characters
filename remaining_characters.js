@@ -30,7 +30,7 @@
             var update = function (c) {
                 var r = max - c;
                 $label.text(options.text.replace('{n}', r));
-                $label.toggleClass(options.invalidClass, r < 0);
+                $label.toggleClass(options.label.invalidClass, r < 0);
             };
             var identifier;
 
